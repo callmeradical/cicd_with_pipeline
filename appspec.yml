@@ -4,6 +4,9 @@ files:
   - source: cookbooks/
     destination: c:/chef
 hooks:
+  BeforeInstall:
+    - location: scripts/before-install.bat
+      timeout: 1800
   ApplicationStart:
     - location: scripts/chef-solo.bat
       timeout: 1800
