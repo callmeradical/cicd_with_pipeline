@@ -1,0 +1,9 @@
+version 0.0
+os: windows
+files:
+  - source: cookbooks/
+    destination: c:/chef
+hooks:
+  ApplicationStart:
+    - location: scripts/chef-solo.bat
+      timeout: 1800
