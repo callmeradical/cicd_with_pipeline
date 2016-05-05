@@ -10,3 +10,5 @@ hooks:
   ApplicationStart:
     - location: scripts/chef-solo.bat
       timeout: 1800
+  VerifyService:
+    - localation: scripts/verify-service.sh

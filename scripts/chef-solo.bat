@@ -1,1 +1,1 @@
-c:/opscode/chef/bin/chef-solo -c c:/chef/cookbooks/solo.rb
+docker run -d callmeradical/blog:1.1
