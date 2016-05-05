@@ -1,0 +1,24 @@
+---
+driver:
+  name: ec2
+  require_chef_omnibus: true
+  aws_ssh_key_id: "aws1"
+  instance_type: "t2.medium"
+  region: "us-east-1"
+  availability_zone: "a"
+  security_group_ids: ["sg-02b64479"]
+  subnet_id: "subnet-eb4021c1"
+  associate_public_ip: true
+
+transport:
+  name: winrm
+  username: chef
+  password: chef
+
+platforms:
+  - name: windows-2012r2
+
+suites:
+- name: default
+  run_list:
+    - recipe[my_site::default]

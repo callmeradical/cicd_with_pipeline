@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: win2012r2-standard
+    driver:
+      box: mwrock/Windows2012R2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[my_site::default]
+    attributes:
